@@ -1,0 +1,7 @@
+{
+  "name": "masterdetail",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

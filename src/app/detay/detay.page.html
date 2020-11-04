@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detay Sayfası</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button text="Geri"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item><ion-label>{{oncekiSayfadanAd}}</ion-label></ion-item>
+  <ion-item><ion-label>{{oncekiSayfadanSoyad}}</ion-label></ion-item>
+  <br>
+  <ion-item *ngIf="!(oncekiSayfadanAd == 'undefined' && oncekiSayfadanSoyad=='undefined')"><ion-label>Merhaba, {{oncekiSayfadanAd}} {{oncekiSayfadanSoyad}}</ion-label></ion-item>
+
+
+</ion-content>

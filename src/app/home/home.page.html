@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title *ngIf="!(ad && soyad)">
+      Ana Sayfa
+    </ion-title>
+    <ion-title *ngIf="ad && soyad">
+      Merhaba, {{ad}} {{soyad}}
+    </ion-title>  
+    <ion-buttons slot="primary">
+      <ion-button (click)="bilgiGoster()">
+        <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+<ion-item>
+  <ion-label position="floating">Ad</ion-label>
+  <ion-input autofocus clearInput placeholder="Adınızı giriniz" [(ngModel)]="ad"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Soyad</ion-label>
+  <ion-input placeholder="Soyadınızı giriniz" [(ngModel)]="soyad"></ion-input>
+</ion-item>
+
+<br>
+<ion-button expand="block" color="danger" (click)="tamam()">Tamam</ion-button>
+<br>
+<ion-button expand="block" color="success" [routerLink]="['/detay']">Detay Sayfasına Git</ion-button>
+<br>
+<ion-button expand="block" color="secondary" (click)="git()">Detay Sayfasına Kod İle Git</ion-button>
+
+</ion-content>
